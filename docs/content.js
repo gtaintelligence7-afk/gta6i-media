@@ -78,11 +78,13 @@ window.SITE = {
       sources: [["Rockstar Games – GTA VI", "https://www.rockstargames.com/VI"]] }
   ],
   series: [
-    { name: "Characters Explained", parts: 8, img: "img/jason_duval_04.jpg", desc: "Every main character, one Short each. Official Rockstar info only.", status: "Premieres from Nov 7" },
+    { name: "Characters Explained", parts: 8, img: "img/jason_duval_04.jpg", desc: "Every main character, one Short each. Official Rockstar info only.", status: "Part 1 is live · new part daily", url: "https://www.tiktok.com/@gta.6.intelligenc/photo/7705049796138061078" },
     { name: "Map Discoveries", parts: 6, img: "img/mount_kalaga_national_park_02.jpg", desc: "All six regions of Leonida, one by one.", status: "Premieres after Characters Explained" },
     { name: "Official vs Rumour", parts: 1, img: "img/vice_city_05.jpg", desc: "Viral claims fact-checked and labelled.", status: "Part 1 is live", url: "https://www.instagram.com/p/DfZNHT4kVsL/" }
   ],
   videos: [
+    { platform: "TikTok", title: "Characters Explained 1/8: Jason Duval", url: "https://www.tiktok.com/@gta.6.intelligenc/photo/7705049796138061078", label: "OFFICIAL" },
+    { platform: "Instagram", title: "Characters Explained 1/8: Jason Duval", url: "https://www.instagram.com/p/DfZ6DZ4DaTx/", label: "OFFICIAL" },
     { platform: "YouTube Short", title: "Meet the 8 main faces of GTA 6", url: "https://youtube.com/shorts/pvzMoij7bPI", label: "OFFICIAL" },
     { platform: "YouTube Short", title: "13 days until GTA 6: everything Rockstar confirmed", url: "https://youtube.com/shorts/XXDITjT9obc", label: "OFFICIAL" },
     { platform: "Instagram", title: "OFFICIAL vs RUMOUR: 4 GTA 6 claims, fact-checked", url: "https://www.instagram.com/p/DfZNHT4kVsL/", label: "FACT-CHECK" },
