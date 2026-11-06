@@ -1,27 +1,101 @@
-// GTA 6 INTELLIGENCE – site content. Edit THIS file to update the site (no rebuild needed).
-// Only add accounts and posts that exist and were verified as public.
+// GTA 6 INTELLIGENCE – magazine content. Edit THIS file to update the site (no build step).
+// Labels: OFFICIAL (Rockstar/Take-Two/platform stores) · REPORTED (credible outlets, not confirmed by Rockstar) · RUMOUR (unconfirmed / anonymous) · THEORY (fan speculation, clearly marked)
 window.SITE = {
   updated: "2026-11-06",
+  launch: "2026-11-19T00:00:00",
   socials: [
-    { name: "YouTube", handle: "@GTA6INTELLIGENCE-q2s", url: "https://www.youtube.com/@GTA6INTELLIGENCE-q2s", active: true },
-    { name: "Instagram", handle: "@gta6_intelligence", url: "https://www.instagram.com/gta6_intelligence/", active: true },
-    { name: "TikTok", handle: "@gta.6.intelligenc", url: "https://www.tiktok.com/@gta.6.intelligenc", active: true },
+    { name: "YouTube", handle: "@GTA6INTELLIGENCE-q2s", url: "https://www.youtube.com/@GTA6INTELLIGENCE-q2s", cta: "Subscribe", active: true },
+    { name: "Instagram", handle: "@gta6_intelligence", url: "https://www.instagram.com/gta6_intelligence/", cta: "Follow", active: true },
+    { name: "TikTok", handle: "@gta.6.intelligenc", url: "https://www.tiktok.com/@gta.6.intelligenc", cta: "Follow", active: true },
     { name: "Facebook", active: false }, { name: "X", active: false }, { name: "Threads", active: false }, { name: "Reddit", active: false }
   ],
-  latest: [
-    { platform: "YouTube Short", title: "Meet the 8 main faces of GTA 6", url: "https://youtube.com/shorts/pvzMoij7bPI", date: "2026-11-06", label: "OFFICIAL" },
-    { platform: "YouTube Short", title: "13 days until GTA 6: everything Rockstar confirmed", url: "https://youtube.com/shorts/XXDITjT9obc", date: "2026-11-06", label: "OFFICIAL" },
-    { platform: "Instagram carousel", title: "OFFICIAL vs RUMOUR: 4 GTA 6 claims, fact-checked", url: "https://www.instagram.com/p/DfZNHT4kVsL/", date: "2026-11-06", label: "FACT-CHECK" },
-    { platform: "TikTok photo", title: "GTA 6: OFFICIAL or RUMOUR? 4 claims fact-checked", url: "https://www.tiktok.com/@gta.6.intelligenc/photo/7704976745652374806", date: "2026-11-06", label: "FACT-CHECK" }
+  articles: [
+    { id: "preload", label: "OFFICIAL", cat: "Launch", date: "2026-11-06", img: "img/vice_city_05.jpg", featured: true,
+      title: "GTA 6 pre-load opens November 10: exact times for PS5 and Xbox",
+      dek: "PlayStation unlocks at midnight local time, Xbox at one global moment. Clear up to 212 GB.",
+      body: ["Rockstar has confirmed that GTA VI pre-loading opens on November 10, nine days before launch.",
+             "On PlayStation 5 the pre-load unlocks at midnight in your local time zone. On Xbox Series X|S it unlocks for everyone at the same moment: 00:00 GMT, which is 01:00 CET and 7 PM ET on November 9.",
+             "The download is up to 212 GB, so check your free space now. The game launches on November 19, 2026."],
+      sources: [["Rockstar Newswire", "https://www.rockstargames.com/newswire"], ["GamesRadar+", "https://www.gamesradar.com/"]] },
+    { id: "prices", label: "OFFICIAL", cat: "Editions", date: "2026-11-05", img: "img/jason_and_lucia_03.jpg",
+      title: "Standard vs Ultimate: what the extra $20 actually gets you",
+      dek: "Standard is $79.99, Ultimate $99.99 in the US. Neither edition ships on a disc.",
+      body: ["Official US prices: Standard Edition $79.99, Ultimate Edition $99.99, on PS5 and Xbox Series X|S.",
+             "Ultimate adds access to two mod shops, Rideout Customs and One-Eyed Willie's, plus extra clothing, hair and tattoo stores in story mode.",
+             "Neither edition comes on a disc: the physical box contains a download code."],
+      sources: [["Shacknews", "https://www.shacknews.com/"], ["Windows Central", "https://www.windowscentral.com/"]] },
+    { id: "bonus", label: "OFFICIAL", cat: "Pre-order", date: "2026-11-05", img: "img/vice_city_10.jpg",
+      title: "The Vintage Vice City Pack disappears after November 19",
+      dek: "A '55 Vapid Stanier, vintage outfits and a palm-tree weapon pattern for digital pre-orders.",
+      body: ["Digital pre-orders placed before November 20 get the Vintage Vice City Pack.",
+             "It includes a '55 Vapid Stanier parked in a Shore Court garage near Ocean Beach, vintage outfits (a pastel linen suit for Jason and a red sequin dress for Lucia) and a tropical palm-tree pattern for most weapons."],
+      sources: [["Rockstar pre-order announcement", "https://www.rockstargames.com/VI"]] },
+    { id: "justice", label: "OFFICIAL", cat: "Music", date: "2026-10-29", img: "img/real_dimez_01.jpg",
+      title: "Justice is scoring GTA 6 and the album lands December 11",
+      dek: "An adaptive score that shifts with how you play, plus a 30-track album.",
+      body: ["Rockstar confirmed that GTA VI's original score is by Justice, the Grammy-winning French duo. It's adaptive, so the music changes with how you play.",
+             "The score album releases December 11 with 30 tracks. Featured artists include Tame Impala, SZA and King Gizzard & the Lizard Wizard, plus a new single with Gesaffelstein, \"Pusher\"."],
+      sources: [["Rockstar Newswire, Oct 29, 2026", "https://www.rockstargames.com/newswire"]] },
+    { id: "pc", label: "RUMOUR", cat: "Platforms", date: "2026-10-13", img: "img/vice_city_02.jpg",
+      title: "GTA 6 on PC in early 2027? Here's what's actually known",
+      dek: "No PC date has been announced. One report cites anonymous sources.",
+      body: ["Rockstar has only announced GTA VI for PS5 and Xbox Series X|S.",
+             "GamesBeat reported on October 13 that a PC version is planned for Q1 2027, citing four anonymous sources. Rockstar has not confirmed this, so treat it as a rumour until there is an official announcement."],
+      sources: [["GamesBeat (anonymous sources)", "https://gamesbeat.com/"]] },
+    { id: "root", label: "REPORTED", cat: "Cast", date: "2026-09-14", img: "img/brian_heder_01.jpg",
+      title: "Actor Stephen Root says he's in GTA 6 as Brian Heder",
+      dek: "Several outlets report the actor confirmed his role. Rockstar hasn't announced its cast.",
+      body: ["In an interview with AP News (reported September 14), actor Stephen Root said of GTA VI: \"You're gonna see me in there.\" Outlets report the role is Brian Heder, the old-school Keys smuggler who is Jason's landlord.",
+             "Rockstar has not published an official cast list, so this is labelled REPORTED rather than OFFICIAL."],
+      sources: [["Vice", "https://www.vice.com/en/article/gta-6-stephen-root-brian-heder-role/"], ["Beebom", "https://beebom.com/stephen-root-confirms-his-gta-6-role-as-brian-heder/"]] },
+    { id: "swamp", label: "THEORY", cat: "Map", date: "2026-11-06", img: "img/grassrivers_03.jpg",
+      title: "What are the 'stranger discoveries' in Grassrivers?",
+      dek: "Rockstar teased them. Nobody knows what they are yet.",
+      body: ["Rockstar's official description of Grassrivers says that deadlier predators than alligators and 'stranger discoveries' lurk in the mangroves. That part is OFFICIAL.",
+             "What those discoveries are is pure fan speculation for now: hidden easter eggs, wildlife encounters or something weirder. We'll update this when the game is out."],
+      sources: [["Rockstar Games – Leonida", "https://www.rockstargames.com/VI"]] },
+    { id: "regions", label: "OFFICIAL", cat: "Map", date: "2026-11-06", img: "img/leonida_keys_02.jpg",
+      title: "The 6 regions of Leonida, explained",
+      dek: "Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia and Mount Kalaga.",
+      body: ["Vice City – 'Everything in Excess': Ocean Beach, Little Cuba, the Tisha-Wocka flea market and VC Port.",
+             "Leonida Keys – 'Gateway to Paradise': islands off the southern coast, next to beautiful and dangerous waters.",
+             "Grassrivers – 'Welcome to the Wetlands': alligators, deadlier predators and stranger discoveries.",
+             "Port Gellhorn – 'Live Hard': Leonida's forgotten coast of cheap motels and empty strip malls.",
+             "Ambrosia – 'Keeping Leonida Sweet': the Allied Crystal sugar refinery and a local biker gang.",
+             "Mount Kalaga National Park – 'Wild, Wild Country': hunting, fishing, off-road trails and paranoid radicals."],
+      sources: [["Rockstar Games – GTA VI", "https://www.rockstargames.com/VI"], ["GosuGamers", "https://www.gosugamers.net/entertainment/news/74895-gta-vi-major-locations-revealed-vice-city-leonida-keys-grassrivers-and-more"]] },
+    { id: "cast", label: "OFFICIAL", cat: "Characters", date: "2026-11-06", img: "img/lucia_caminos_02.jpg",
+      title: "Meet the 8 main characters of GTA 6",
+      dek: "Jason, Lucia, Cal, Boobie, Dre'Quan, Real Dimez, Raul and Brian.",
+      body: ["Jason Duval – raised around grifters, ex-Army, now running jobs for drug runners in the Keys.",
+             "Lucia Caminos – jailed for defending her family, now out and chasing the good life.",
+             "Cal Hampton – Jason's paranoid friend who monitors Coast Guard radio.",
+             "Boobie Ike – Vice City legend with real estate, a strip club and a studio.",
+             "Dre'Quan Priest – hustler turned music boss at Only Raw Records.",
+             "Real Dimez – viral rap duo Bae-Luxe and Roxy, signed to Only Raw.",
+             "Raul Bautista – seasoned bank robber, always recruiting.",
+             "Brian Heder – old-school Keys smuggler and Jason's landlord."],
+      sources: [["Rockstar Games – GTA VI", "https://www.rockstargames.com/VI"]] }
+  ],
+  series: [
+    { name: "Characters Explained", parts: 8, img: "img/jason_duval_04.jpg", desc: "Every main character, one Short each. Official Rockstar info only.", status: "Premieres from Nov 7" },
+    { name: "Map Discoveries", parts: 6, img: "img/mount_kalaga_national_park_02.jpg", desc: "All six regions of Leonida, one by one.", status: "Premieres after Characters Explained" },
+    { name: "Official vs Rumour", parts: 1, img: "img/vice_city_05.jpg", desc: "Viral claims fact-checked and labelled.", status: "Part 1 is live", url: "https://www.instagram.com/p/DfZNHT4kVsL/" }
+  ],
+  videos: [
+    { platform: "YouTube Short", title: "Meet the 8 main faces of GTA 6", url: "https://youtube.com/shorts/pvzMoij7bPI", label: "OFFICIAL" },
+    { platform: "YouTube Short", title: "13 days until GTA 6: everything Rockstar confirmed", url: "https://youtube.com/shorts/XXDITjT9obc", label: "OFFICIAL" },
+    { platform: "Instagram", title: "OFFICIAL vs RUMOUR: 4 GTA 6 claims, fact-checked", url: "https://www.instagram.com/p/DfZNHT4kVsL/", label: "FACT-CHECK" },
+    { platform: "TikTok", title: "GTA 6: OFFICIAL or RUMOUR? 4 claims fact-checked", url: "https://www.tiktok.com/@gta.6.intelligenc/photo/7704976745652374806", label: "FACT-CHECK" }
   ],
   dates: [
-    { date: "Nov 10, 2026", what: "Pre-load opens (PS5 midnight local · Xbox 00:00 GMT) · up to 212 GB" },
-    { date: "Nov 19, 2026", what: "Launch on PS5 and Xbox Series X|S" },
-    { date: "Before Nov 20", what: "Digital pre-order bonus: Vintage Vice City Pack" },
-    { date: "Dec 11, 2026", what: "Original score album by Justice" }
+    { date: "Nov 10, 2026", what: "Pre-load opens (PS5 midnight local · Xbox 00:00 GMT) · up to 212 GB", label: "OFFICIAL" },
+    { date: "Nov 19, 2026", what: "Launch on PS5 and Xbox Series X|S", label: "OFFICIAL" },
+    { date: "Before Nov 20", what: "Digital pre-order bonus: Vintage Vice City Pack", label: "OFFICIAL" },
+    { date: "Dec 11, 2026", what: "Original score album by Justice", label: "OFFICIAL" },
+    { date: "Q1 2027?", what: "PC version – reported by GamesBeat, not confirmed", label: "RUMOUR" }
   ],
-  // Future (NOT active): membership / supporters / sponsorship. Set enabled:true only after the owner approves.
   membership: { enabled: false, provider: "Herohero", url: "" },
-  contact: { text: "Business & press: send us a DM on Instagram @gta6_intelligence.", email: "" },
-  analytics: { goatcounter: "" } // e.g. "https://<code>.goatcounter.com/count" once the owner creates a free GoatCounter site
+  contact: { text: "Business & press: DM us on Instagram @gta6_intelligence.", email: "" },
+  analytics: { goatcounter: "" }
 };

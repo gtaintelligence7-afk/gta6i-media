@@ -3,90 +3,197 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA 6 Intelligence – fact-checked GTA 6 news</title>
-<meta name="description" content="GTA 6 news, fact-checked daily. Every claim labelled OFFICIAL or RUMOUR. Follow GTA 6 Intelligence on YouTube, Instagram and TikTok.">
+<title>GTA 6 Intelligence – fact-checked GTA 6 news magazine</title>
+<meta name="description" content="GTA 6 news, fact-checked daily. Every story labelled OFFICIAL, REPORTED, RUMOUR or THEORY. Launch countdown, pre-load times, editions, characters and the Leonida map.">
 <meta property="og:title" content="GTA 6 Intelligence – fact-checked GTA 6 news">
-<meta property="og:description" content="OFFICIAL vs RUMOUR, always labelled. Daily GTA 6 updates.">
-<meta property="og:image" content="assets/og.jpg">
+<meta property="og:description" content="OFFICIAL vs RUMOUR, always labelled. Daily GTA 6 news, characters, map and launch info.">
+<meta property="og:image" content="https://gtaintelligence7-afk.github.io/gta6i-media/assets/og.jpg">
+<meta property="og:url" content="https://gtaintelligence7-afk.github.io/gta6i-media/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b0618">
 <link rel="icon" href="assets/logo.png">
+<link rel="canonical" href="https://gtaintelligence7-afk.github.io/gta6i-media/">
 <style>
-:root{--ink:#0b0618;--deep:#1a0730;--pink:#ff3d8b;--cyan:#29e3ff;--yellow:#ffe14d;--green:#2bff88;--text:#f4f1ff;--muted:#b9b0d6;--card:rgba(255,255,255,.06);--line:rgba(255,255,255,.12)}
+:root{--ink:#0b0618;--deep:#160a2c;--pink:#ff3d8b;--cyan:#29e3ff;--yellow:#ffe14d;--green:#2bff88;--amber:#ffb000;--violet:#b48bff;--text:#f4f1ff;--muted:#b9b0d6;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.11)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--ink);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;min-height:100vh}
-body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(1200px 600px at 50% -10%,#5a1470 0%,transparent 60%),linear-gradient(180deg,#14072e 0%,#0b0618 55%,#06030d 100%)}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--text);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(1100px 600px at 80% -10%,rgba(255,61,139,.28),transparent 60%),radial-gradient(900px 500px at 0% 10%,rgba(41,227,255,.18),transparent 60%),linear-gradient(180deg,#14072e,#0b0618 40%,#06030d)}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:720px;margin:0 auto;padding:28px 16px 48px}
-header{text-align:center;padding:12px 0 8px}
-.logo{width:112px;height:112px;border-radius:50%;box-shadow:0 0 0 3px var(--pink),0 0 40px rgba(255,61,139,.5)}
-h1{font-size:clamp(28px,7vw,44px);font-weight:900;font-style:italic;letter-spacing:.5px;margin-top:14px;background:linear-gradient(90deg,var(--pink),var(--yellow));-webkit-background-clip:text;background-clip:text;color:transparent}
-.tag{color:var(--muted);margin-top:6px}
-.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
-.chip{font-size:12px;font-weight:800;letter-spacing:.8px;padding:5px 10px;border-radius:999px;border:1px solid var(--line)}
-.chip.o{color:var(--green);border-color:rgba(43,255,136,.5)} .chip.r{color:var(--pink);border-color:rgba(255,61,139,.5)}
-h2{font-size:13px;letter-spacing:2px;color:var(--cyan);margin:34px 0 12px;font-weight:900}
-.links{display:grid;gap:10px}
-.btn{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-weight:800;transition:transform .15s,border-color .15s}
-.btn:hover{transform:translateY(-2px);border-color:var(--pink)}
-.btn svg{width:26px;height:26px;flex:none}
-.btn small{display:block;font-weight:600;color:var(--muted)}
-.btn .go{margin-left:auto;color:var(--pink);font-size:13px}
-.btn.off{opacity:.45;pointer-events:none}
-.grid{display:grid;gap:10px}
-.post{padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
-.post b{display:block} .post span{font-size:13px;color:var(--muted)}
-.lbl{font-size:11px;font-weight:900;color:var(--green);letter-spacing:1px}
-.dates{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
-.dates div{display:flex;gap:14px;padding:12px 16px;background:var(--card);border-top:1px solid var(--line)} .dates div:first-child{border-top:0}
-.dates b{color:var(--yellow);min-width:118px}
-.contact{padding:16px;border-radius:14px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
-footer{margin-top:36px;font-size:12px;color:var(--muted);text-align:center;line-height:1.6}
-@media(min-width:900px){.wrap{max-width:900px}.links{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}}
+img{display:block;max-width:100%}
+.wrap{max-width:1160px;margin:0 auto;padding:0 16px}
+/* top bar */
+.top{position:sticky;top:0;z-index:20;background:rgba(11,6,24,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-style:italic;letter-spacing:.3px;white-space:nowrap}
+.brand img{width:36px;height:36px;border-radius:50%;box-shadow:0 0 0 2px var(--pink)}
+.brand b{color:var(--pink)}
+.nav{display:flex;gap:18px;margin-left:auto;font-weight:700;font-size:14px;color:var(--muted)}
+.nav a:hover{color:#fff}
+.follow{margin-left:8px;padding:9px 16px;border-radius:999px;background:var(--pink);color:#fff;font-weight:900;font-size:14px;white-space:nowrap}
+@media(max-width:820px){.nav{display:none}.follow{margin-left:auto}}
+/* hero */
+.hero{display:grid;gap:20px;padding:26px 0 8px}
+@media(min-width:900px){.hero{grid-template-columns:1.6fr 1fr}}
+.feat{position:relative;border-radius:22px;overflow:hidden;min-height:380px;border:1px solid var(--line);cursor:pointer}
+.feat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(6,3,13,.95))}
+.feat .in{position:absolute;left:0;right:0;bottom:0;padding:24px;z-index:1}
+.feat h1{font-size:clamp(24px,4vw,40px);line-height:1.12;font-weight:900;margin:10px 0 8px}
+.feat p{color:#ddd}
+.side{display:grid;gap:14px;align-content:start}
+.count{border-radius:22px;padding:20px;background:linear-gradient(135deg,rgba(255,61,139,.22),rgba(41,227,255,.12));border:1px solid var(--line)}
+.count small{font-weight:900;letter-spacing:2px;color:var(--cyan);font-size:12px}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:10px}
+.cd div{background:rgba(0,0,0,.35);border-radius:14px;padding:10px 4px;text-align:center}
+.cd b{display:block;font-size:30px;font-weight:900;font-style:italic;color:var(--yellow)}
+.cd span{font-size:11px;color:var(--muted);font-weight:800;letter-spacing:1px}
+.count p{margin-top:10px;font-size:14px;color:var(--muted)}
+.mini{display:grid;gap:10px}
+.mini a{display:grid;grid-template-columns:86px 1fr;gap:12px;align-items:center;padding:8px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.mini img{width:86px;height:64px;object-fit:cover;border-radius:10px}
+.mini b{font-size:14px;line-height:1.3;display:block}
+/* labels */
+.lbl{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:900;letter-spacing:1.2px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);border:1.5px solid currentColor}
+.lbl:before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.L-OFFICIAL{color:var(--green)}.L-REPORTED{color:var(--amber)}.L-RUMOUR{color:var(--pink)}.L-THEORY{color:var(--violet)}.L-FACT-CHECK{color:var(--cyan)}
+.cat{font-size:12px;font-weight:800;color:var(--muted);margin-left:8px;text-transform:uppercase;letter-spacing:1px}
+/* sections */
+h2{font-size:14px;letter-spacing:2.5px;color:var(--cyan);font-weight:900;margin:44px 0 14px;display:flex;align-items:center;gap:12px}
+h2:after{content:"";flex:1;height:1px;background:var(--line)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.filters button{font:inherit;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer}
+.filters button.on{background:#fff;color:#111}
+.legend{font-size:13px;color:var(--muted);margin:-6px 0 16px}
+.grid{display:grid;gap:16px}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.art{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
+.art:hover{transform:translateY(-3px);border-color:rgba(255,61,139,.6)}
+.art .ph{position:relative;aspect-ratio:16/9;overflow:hidden}
+.art .ph img{width:100%;height:100%;object-fit:cover}
+.art .ph .lbl{position:absolute;left:12px;top:12px}
+.art .bd{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.art h3{font-size:19px;line-height:1.25;font-weight:900}
+.art p{color:var(--muted);font-size:15px}
+.art .meta{font-size:12px;color:var(--muted);font-weight:700;margin-top:auto}
+.art button{font:inherit;margin-top:6px;align-self:flex-start;background:none;border:0;color:var(--yellow);font-weight:900;cursor:pointer;padding:0}
+.full{display:none;border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+.full p{color:#e6e1ff;margin-bottom:10px}
+.full .src{font-size:13px;color:var(--muted)}
+.full .src a{color:var(--cyan);text-decoration:underline}
+.art.open .full{display:block}
+/* series */
+.series{display:grid;gap:16px}
+@media(min-width:800px){.series{grid-template-columns:repeat(3,1fr)}}
+.ser{position:relative;border-radius:20px;overflow:hidden;min-height:220px;border:1px solid var(--line)}
+.ser img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.ser .in{position:relative;padding:18px;display:flex;flex-direction:column;height:100%;min-height:220px;background:linear-gradient(180deg,rgba(11,6,24,.2),rgba(11,6,24,.92))}
+.ser .tag{font-size:11px;font-weight:900;letter-spacing:1.5px;color:#111;background:var(--yellow);padding:4px 10px;border-radius:8px;align-self:flex-start}
+.ser h3{font-size:22px;font-weight:900;font-style:italic;margin-top:auto}
+.ser p{font-size:14px;color:#ddd}
+.ser small{font-weight:800;color:var(--cyan);margin-top:6px}
+/* videos + dates */
+.two{display:grid;gap:16px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+.vid{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:16px;background:var(--card);border:1px solid var(--line);margin-bottom:10px}
+.vid .pl{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--pink);font-weight:900;flex:none}
+.vid b{display:block;font-size:15px;line-height:1.3}.vid span{font-size:12px;color:var(--muted)}
+.dates{border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.dates div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding:12px 16px;background:var(--card);border-top:1px solid var(--line);align-items:center}
+.dates div:first-child{border-top:0}
+.dates b{color:var(--yellow);font-size:14px}
+.dates .lbl{margin-top:4px}
+/* follow */
+.fol{margin-top:44px;border-radius:24px;padding:26px;background:linear-gradient(135deg,rgba(255,61,139,.25),rgba(41,227,255,.15));border:1px solid var(--line);text-align:center}
+.fol h3{font-size:clamp(22px,4vw,32px);font-weight:900;font-style:italic}
+.fol p{color:#ddd;margin:6px auto 18px;max-width:560px}
+.socials{display:grid;gap:10px}
+@media(min-width:700px){.socials{grid-template-columns:repeat(3,1fr)}}
+.soc{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:rgba(0,0,0,.4);border:1px solid var(--line);text-align:left;font-weight:900}
+.soc svg{width:28px;height:28px;flex:none}
+.soc small{display:block;font-weight:600;color:var(--muted)}
+.soc .go{margin-left:auto;font-size:13px;padding:6px 12px;border-radius:999px;background:var(--pink);color:#fff}
+.soon{font-size:13px;color:var(--muted);margin-top:12px}
+.contact{margin-top:16px;color:var(--muted);font-size:14px}
+footer{margin:40px 0 30px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header>
-  <img class="logo" src="assets/logo.png" alt="GTA 6 Intelligence logo" width="112" height="112">
-  <h1>GTA 6 INTELLIGENCE</h1>
-  <p class="tag">GTA 6 news, fact-checked daily. New drop every day at 17:00 CET.</p>
-  <div class="chips"><span class="chip o">OFFICIAL</span><span class="chip r">RUMOUR</span><span class="chip">ALWAYS LABELLED</span></div>
-</header>
-<h2>FOLLOW US EVERYWHERE</h2>
-<nav class="links" id="links"></nav>
-<h2>LATEST</h2>
-<section class="grid" id="latest"></section>
-<h2>OFFICIAL KEY DATES</h2>
-<section class="dates" id="dates"></section>
-<section id="member" hidden><h2>SUPPORT US</h2><div class="contact" id="memberBox"></div></section>
-<h2>CONTACT</h2>
-<section class="contact" id="contact"></section>
-<footer>
+<header class="top"><div class="wrap">
+  <a class="brand" href="#"><img src="assets/logo.png" alt="" width="36" height="36"><span>GTA 6 <b>INTELLIGENCE</b></span></a>
+  <nav class="nav"><a href="#news">News</a><a href="#series">Series</a><a href="#videos">Videos</a><a href="#dates">Key dates</a><a href="#follow">Follow</a></nav>
+  <a class="follow" href="#follow">Follow us</a>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <article class="feat" id="feat"></article>
+    <aside class="side">
+      <div class="count"><small>GTA 6 LAUNCH · NOV 19, 2026 · PS5 & XBOX SERIES X|S</small><div class="cd" id="cd"></div><p>Pre-load opens Nov 10. <span class="lbl L-OFFICIAL">OFFICIAL</span></p></div>
+      <div class="mini" id="mini"></div>
+    </aside>
+  </section>
+
+  <h2 id="news">LATEST GTA 6 NEWS</h2>
+  <div class="filters" id="filters"></div>
+  <p class="legend"><span class="lbl L-OFFICIAL">OFFICIAL</span> Rockstar / Take-Two / stores · <span class="lbl L-REPORTED">REPORTED</span> credible outlets · <span class="lbl L-RUMOUR">RUMOUR</span> unconfirmed · <span class="lbl L-THEORY">THEORY</span> fan speculation</p>
+  <section class="grid" id="grid"></section>
+
+  <h2 id="series">OUR SERIES</h2>
+  <section class="series" id="ser"></section>
+
+  <div class="two">
+    <div><h2 id="videos">LATEST VIDEOS & POSTS</h2><div id="vids"></div></div>
+    <div><h2 id="dates">OFFICIAL KEY DATES</h2><div class="dates" id="dts"></div></div>
+  </div>
+
+  <section class="fol" id="follow">
+    <h3>FOLLOW FOR DAILY GTA 6 INTELLIGENCE</h3>
+    <p>Verified updates, hidden details and new discoveries, every day until launch and beyond. Every claim labelled, no fake leaks.</p>
+    <div class="socials" id="soc"></div>
+    <p class="soon" id="soon"></p>
+    <p class="contact" id="contact"></p>
+  </section>
+  <section id="member" hidden><h2>SUPPORT US</h2><div id="memberBox"></div></section>
+</main>
+<footer class="wrap">
   <p>Updated <span id="upd"></span> · © 2026 GTA 6 Intelligence</p>
-  <p>Independent fan project. Not affiliated with, endorsed or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks belong to their owners. Game imagery is used for news commentary only.</p>
+  <p>Independent fan project. Not affiliated with, endorsed or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks and imagery belong to their owners; official images are used for news commentary with credit.</p>
   <p>No cookies. No tracking of personal data.</p>
 </footer>
-</div>
 <script src="content.js"></script>
 <script>
+const S=window.SITE, esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lbl=l=>`<span class="lbl L-${esc(l)}">${esc(l)}</span>`;
+const fmt=d=>new Date(d+'T12:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+const A=S.articles, F=A.find(a=>a.featured)||A[0];
+document.getElementById('feat').innerHTML=`<img src="${esc(F.img)}" alt=""><div class="in">${lbl(F.label)}<span class="cat">${esc(F.cat)}</span><h1>${esc(F.title)}</h1><p>${esc(F.dek)}</p></div>`;
+document.getElementById('feat').onclick=()=>openArt(F.id);
+document.getElementById('mini').innerHTML=A.filter(a=>a!==F).slice(0,3).map(a=>`<a href="#${esc(a.id)}"><img src="${esc(a.img)}" alt="" loading="lazy"><span>${lbl(a.label)}<b>${esc(a.title)}</b></span></a>`).join('');
+function card(a){return `<article class="art" id="${esc(a.id)}" data-l="${esc(a.label)}"><div class="ph"><img src="${esc(a.img)}" alt="" loading="lazy">${lbl(a.label)}</div><div class="bd"><div><span class="cat" style="margin:0">${esc(a.cat)}</span></div><h3>${esc(a.title)}</h3><p>${esc(a.dek)}</p>
+<div class="full">${a.body.map(p=>`<p>${esc(p)}</p>`).join('')}<p class="src">Sources: ${a.sources.map(s=>`<a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a>`).join(' · ')}</p></div>
+<button data-id="${esc(a.id)}">Read more ↓</button><div class="meta">${fmt(a.date)}</div></div></article>`}
+const grid=document.getElementById('grid');grid.innerHTML=A.map(card).join('');
+grid.addEventListener('click',e=>{const b=e.target.closest('button[data-id]');if(!b)return;const el=b.closest('.art');el.classList.toggle('open');b.textContent=el.classList.contains('open')?'Show less ↑':'Read more ↓';});
+function openArt(id){const el=document.getElementById(id);if(!el)return;el.classList.add('open');el.querySelector('button').textContent='Show less ↑';el.scrollIntoView({behavior:'smooth',block:'start'});}
+window.addEventListener('hashchange',()=>openArt(location.hash.slice(1)));if(location.hash)setTimeout(()=>openArt(location.hash.slice(1)),50);
+const labels=['ALL',...new Set(A.map(a=>a.label))];
+document.getElementById('filters').innerHTML=labels.map((l,i)=>`<button class="${i?'':'on'}" data-l="${esc(l)}">${esc(l)}</button>`).join('');
+document.getElementById('filters').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('.filters button').forEach(x=>x.classList.toggle('on',x===b));const l=b.dataset.l;document.querySelectorAll('.art').forEach(a=>a.style.display=(l==='ALL'||a.dataset.l===l)?'':'none');};
+document.getElementById('ser').innerHTML=S.series.map(s=>{const inner=`<img src="${esc(s.img)}" alt="" loading="lazy"><div class="in"><span class="tag">SERIES · ${s.parts} ${s.parts>1?'PARTS':'PART'}</span><h3>${esc(s.name)}</h3><p>${esc(s.desc)}</p><small>${esc(s.status)}</small></div>`;return s.url?`<a class="ser" href="${esc(s.url)}" target="_blank" rel="noopener">${inner}</a>`:`<div class="ser">${inner}</div>`;}).join('');
+document.getElementById('vids').innerHTML=S.videos.map(v=>`<a class="vid" href="${esc(v.url)}" target="_blank" rel="noopener" data-goatcounter-click="video-${esc(v.platform)}"><span class="pl">▶</span><span><b>${esc(v.title)}</b><span>${esc(v.platform)} · ${lbl(v.label)}</span></span></a>`).join('');
+document.getElementById('dts').innerHTML=S.dates.map(d=>`<div><b>${esc(d.date)}</b><span>${esc(d.what)}<br>${lbl(d.label)}</span></div>`).join('');
 const ICON={YouTube:'<path fill="#ff0033" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-4.8.5-4.8s0-3.2-.5-4.8z"/><path fill="#fff" d="M9.8 15.2 15.6 12 9.8 8.8z"/>',
 Instagram:'<rect x="2" y="2" width="20" height="20" rx="6" fill="none" stroke="#ff3d8b" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="#ff3d8b" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="#ff3d8b"/>',
-TikTok:'<path fill="#29e3ff" d="M16.5 2c.3 2.4 1.7 4 4 4.2v3.3a7.6 7.6 0 0 1-4-1.2v6.5A6.2 6.2 0 1 1 10.3 8.6v3.4a2.9 2.9 0 1 0 2.1 2.8V2z"/>',
-Facebook:'<path fill="#9aa" d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.4V11H7v4h3v7h4v-7h3l1-4h-4V8.9c0-.6.3-.9 1-.9z"/>',
-X:'<path fill="#9aa" d="M17.7 3h3.1l-6.8 7.8L22 21h-6.3l-4.9-6.4L5.2 21H2.1l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.5 4.7H5.7z"/>',
-Threads:'<circle cx="12" cy="12" r="9" fill="none" stroke="#9aa" stroke-width="2"/><path d="M15.5 10c-.6-2-4.8-2.4-5.6.4-.8 2.7 3.5 4 5.2 2 1.4-1.6-.2-4.6-2.6-3.7" fill="none" stroke="#9aa" stroke-width="2"/>',
-Reddit:'<circle cx="12" cy="13" r="8" fill="none" stroke="#9aa" stroke-width="2"/><circle cx="9" cy="12.5" r="1.2" fill="#9aa"/><circle cx="15" cy="12.5" r="1.2" fill="#9aa"/><path d="M9 16c1.6 1.2 4.4 1.2 6 0" stroke="#9aa" stroke-width="1.6" fill="none"/>'};
-const S=window.SITE, esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-document.getElementById('links').innerHTML=S.socials.map(s=>s.active
- ?`<a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener" data-goatcounter-click="out-${esc(s.name)}"><svg viewBox="0 0 24 24">${ICON[s.name]||''}</svg><span>${esc(s.name)}<small>${esc(s.handle)}</small></span><span class="go">FOLLOW →</span></a>`
- :`<div class="btn off" aria-disabled="true"><svg viewBox="0 0 24 24">${ICON[s.name]||''}</svg><span>${esc(s.name)}<small>not configured yet</small></span></div>`).join('');
-document.getElementById('latest').innerHTML=S.latest.map(p=>`<a class="post" href="${esc(p.url)}" target="_blank" rel="noopener" data-goatcounter-click="post-${esc(p.platform)}"><span class="lbl">${esc(p.label)}</span><b>${esc(p.title)}</b><span>${esc(p.platform)} · ${esc(p.date)}</span></a>`).join('');
-document.getElementById('dates').innerHTML=S.dates.map(d=>`<div><b>${esc(d.date)}</b><span>${esc(d.what)}</span></div>`).join('');
+TikTok:'<path fill="#29e3ff" d="M16.5 2c.3 2.4 1.7 4 4 4.2v3.3a7.6 7.6 0 0 1-4-1.2v6.5A6.2 6.2 0 1 1 10.3 8.6v3.4a2.9 2.9 0 1 0 2.1 2.8V2z"/>'};
+document.getElementById('soc').innerHTML=S.socials.filter(s=>s.active).map(s=>`<a class="soc" href="${esc(s.url)}" target="_blank" rel="noopener" data-goatcounter-click="out-${esc(s.name)}"><svg viewBox="0 0 24 24">${ICON[s.name]||''}</svg><span>${esc(s.name)}<small>${esc(s.handle)}</small></span><span class="go">${esc(s.cta||'Follow')}</span></a>`).join('');
+const off=S.socials.filter(s=>!s.active).map(s=>s.name);if(off.length)document.getElementById('soon').textContent='Not configured yet: '+off.join(', ')+'.';
 document.getElementById('contact').textContent=S.contact.text+(S.contact.email?' '+S.contact.email:'');
-document.getElementById('upd').textContent=S.updated;
-if(S.membership.enabled&&S.membership.url){document.getElementById('member').hidden=false;document.getElementById('memberBox').innerHTML=`<a class="btn" href="${esc(S.membership.url)}" target="_blank" rel="noopener">Support on ${esc(S.membership.provider)} <span class="go">→</span></a>`;}
+document.getElementById('upd').textContent=fmt(S.updated);
+function tick(){let d=Math.max(0,new Date(S.launch)-new Date());const u=[['DAYS',864e5],['HRS',36e5],['MIN',6e4],['SEC',1e3]].map(([n,m])=>{const v=Math.floor(d/m);d-=v*m;return `<div><b>${String(v).padStart(2,'0')}</b><span>${n}</span></div>`});document.getElementById('cd').innerHTML=u.join('');}
+tick();setInterval(tick,1000);
+if(S.membership.enabled&&S.membership.url){document.getElementById('member').hidden=false;document.getElementById('memberBox').innerHTML=`<a class="soc" href="${esc(S.membership.url)}" target="_blank" rel="noopener">Support on ${esc(S.membership.provider)}</a>`;}
 if(S.analytics.goatcounter){const g=document.createElement('script');g.async=true;g.src='https://gc.zgo.at/count.js';g.dataset.goatcounter=S.analytics.goatcounter;document.body.appendChild(g);}
 </script>
 </body>
