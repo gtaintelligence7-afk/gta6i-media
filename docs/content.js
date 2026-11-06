@@ -12,7 +12,7 @@ window.SITE = {
     { platform: "YouTube Short", title: "Meet the 8 main faces of GTA 6", url: "https://youtube.com/shorts/pvzMoij7bPI", date: "2026-11-06", label: "OFFICIAL" },
     { platform: "YouTube Short", title: "13 days until GTA 6: everything Rockstar confirmed", url: "https://youtube.com/shorts/XXDITjT9obc", date: "2026-11-06", label: "OFFICIAL" },
     { platform: "Instagram carousel", title: "OFFICIAL vs RUMOUR: 4 GTA 6 claims, fact-checked", url: "https://www.instagram.com/p/DfZNHT4kVsL/", date: "2026-11-06", label: "FACT-CHECK" },
-    { platform: "TikTok photo", title: "GTA 6: OFFICIAL or RUMOUR? 4 claims fact-checked", url: "https://www.tiktok.com/@gta.6.intelligenc/video/7704976745652374806", date: "2026-11-06", label: "FACT-CHECK" }
+    { platform: "TikTok photo", title: "GTA 6: OFFICIAL or RUMOUR? 4 claims fact-checked", url: "https://www.tiktok.com/@gta.6.intelligenc/photo/7704976745652374806", date: "2026-11-06", label: "FACT-CHECK" }
   ],
   dates: [
     { date: "Nov 10, 2026", what: "Pre-load opens (PS5 midnight local · Xbox 00:00 GMT) · up to 212 GB" },
