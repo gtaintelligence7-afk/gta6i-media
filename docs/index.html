@@ -94,6 +94,20 @@ h2:after{content:"";flex:1;height:1px;background:var(--line)}
 .ser h3{font-size:22px;font-weight:900;font-style:italic;margin-top:auto}
 .ser p{font-size:14px;color:#ddd}
 .ser small{font-weight:800;color:var(--cyan);margin-top:6px}
+.eps{display:grid;gap:10px}
+@media(min-width:800px){.eps{grid-template-columns:1fr 1fr}}
+.epi{display:flex;gap:14px;align-items:center;padding:12px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line)}
+.epi .n{flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-weight:900;font-style:italic;background:rgba(255,61,139,.15);color:var(--pink);font-size:15px}
+.epi b{display:block;font-size:15px;line-height:1.25}.epi small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.st{margin-left:auto;flex:none;font-size:11px;font-weight:900;letter-spacing:1px;padding:4px 9px;border-radius:999px;border:1.5px solid currentColor;text-align:center}
+.st.LIVE{color:var(--green)}.st.SCHEDULED{color:var(--yellow)}.st.SOON{color:var(--muted)}
+.epi a{color:var(--cyan);font-weight:800;text-decoration:underline;margin-right:8px}
+.tabs{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:13px;font-weight:800;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer}.tabs button.on{background:var(--pink);color:#fff;border-color:var(--pink)}
+.about{display:grid;gap:16px}@media(min-width:900px){.about{grid-template-columns:1.2fr 1fr}}
+.about .box{border-radius:20px;padding:22px;background:var(--card);border:1px solid var(--line)}
+.about ul{list-style:none;display:grid;gap:10px;margin-top:6px}.about li:before{content:"✓ ";color:var(--green);font-weight:900}
+.share{font:inherit;background:none;border:0;color:var(--muted);font-size:12px;font-weight:800;cursor:pointer;margin-left:10px}
 /* videos + dates */
 .two{display:grid;gap:16px}
 @media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
@@ -119,11 +133,13 @@ h2:after{content:"";flex:1;height:1px;background:var(--line)}
 .contact{margin-top:16px;color:var(--muted);font-size:14px}
 footer{margin:40px 0 30px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsMediaOrganization","name":"GTA 6 Intelligence","url":"https://gtaintelligence7-afk.github.io/gta6i-media/","logo":"https://gtaintelligence7-afk.github.io/gta6i-media/assets/logo.png","sameAs":["https://www.youtube.com/@GTA6INTELLIGENCE-q2s","https://www.instagram.com/gta6_intelligence/","https://www.tiktok.com/@gta.6.intelligenc"]}</script>
+<link rel="manifest" href="manifest.json">
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="#"><img src="assets/logo.png" alt="" width="36" height="36"><span>GTA 6 <b>INTELLIGENCE</b></span></a>
-  <nav class="nav"><a href="#news">News</a><a href="#series">Series</a><a href="#videos">Videos</a><a href="#dates">Key dates</a><a href="#follow">Follow</a></nav>
+  <nav class="nav"><a href="#news">News</a><a href="#series">Series</a><a href="#episodes">Episodes</a><a href="#videos">Videos</a><a href="#dates">Key dates</a><a href="#about">About</a><a href="#follow">Follow</a></nav>
   <a class="follow" href="#follow">Follow us</a>
 </div></header>
 <main class="wrap">
@@ -143,10 +159,18 @@ footer{margin:40px 0 30px;font-size:12px;color:var(--muted);text-align:center;li
   <h2 id="series">OUR SERIES</h2>
   <section class="series" id="ser"></section>
 
+  <h2 id="episodes">EPISODE GUIDE</h2>
+  <div class="tabs" id="eptabs"></div>
+  <section class="eps" id="eplist"></section>
+
   <div class="two">
     <div><h2 id="videos">LATEST VIDEOS & POSTS</h2><div id="vids"></div></div>
     <div><h2 id="dates">OFFICIAL KEY DATES</h2><div class="dates" id="dts"></div></div>
   </div>
+
+  <h2 id="about">ABOUT GTA 6 INTELLIGENCE</h2>
+  <section class="about"><div class="box"><p id="abt"></p><ul id="pil"></ul></div>
+  <div class="box"><b style="font-size:18px">Work with us</b><p style="color:var(--muted);margin-top:8px">Brand partnerships, press and collaborations: DM <b>@gta6_intelligence</b> on Instagram. We only promote products that fit the audience and we always mark sponsored content.</p></div></section>
 
   <section class="fol" id="follow">
     <h3>FOLLOW FOR DAILY GTA 6 INTELLIGENCE</h3>
@@ -162,7 +186,7 @@ footer{margin:40px 0 30px;font-size:12px;color:var(--muted);text-align:center;li
   <p>Independent fan project. Not affiliated with, endorsed or sponsored by Rockstar Games or Take-Two Interactive. Grand Theft Auto and related marks and imagery belong to their owners; official images are used for news commentary with credit.</p>
   <p>No cookies. No tracking of personal data.</p>
 </footer>
-<script src="content.js?v=20261106c"></script>
+<script src="content.js?v=20261106d"></script>
 <script>
 const S=window.SITE, esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const lbl=l=>`<span class="lbl L-${esc(l)}">${esc(l)}</span>`;
@@ -191,6 +215,14 @@ document.getElementById('soc').innerHTML=S.socials.filter(s=>s.active).map(s=>`<
 const off=S.socials.filter(s=>!s.active).map(s=>s.name);if(off.length)document.getElementById('soon').textContent='Not configured yet: '+off.join(', ')+'.';
 document.getElementById('contact').textContent=S.contact.text+(S.contact.email?' '+S.contact.email:'');
 document.getElementById('upd').textContent=fmt(S.updated);
+
+const E=S.episodes||[];const sers=[...new Set(E.map(e=>e.series))];
+document.getElementById('eptabs').innerHTML=sers.map((n,i)=>`<button class="${i?'':'on'}" data-s="${esc(n)}">${esc(n)}</button>`).join('');
+function eps(n){document.getElementById('eplist').innerHTML=E.filter(e=>e.series===n).map(e=>`<div class="epi"><span class="n">${e.part}/${e.of}</span><span><b>${esc(e.name)}</b><small>${esc(e.teaser)}${e.when?' · '+esc(e.when):''}</small>${(e.links||[]).map(l=>`<a href="${esc(l[1])}" target="_blank" rel="noopener">${esc(l[0])}</a>`).join('')}</span><span class="st ${e.status==='COMING SOON'?'SOON':esc(e.status)}">${esc(e.status)}</span></div>`).join('');}
+if(sers.length)eps(sers[0]);
+document.getElementById('eptabs').onclick=ev=>{const b=ev.target.closest('button');if(!b)return;document.querySelectorAll('#eptabs button').forEach(x=>x.classList.toggle('on',x===b));eps(b.dataset.s);};
+if(S.about){document.getElementById('abt').textContent=S.about.text;document.getElementById('pil').innerHTML=S.about.pillars.map(p=>`<li>${esc(p)}</li>`).join('');}
+document.querySelectorAll('.art .meta').forEach(m=>{const id=m.closest('.art').id;const b=document.createElement('button');b.className='share';b.textContent='🔗 Copy link';b.onclick=()=>{const u=location.origin+location.pathname+'#'+id;(navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>b.textContent='✓ Copied',()=>prompt('Link:',u));};m.appendChild(b);});
 function tick(){let d=Math.max(0,new Date(S.launch)-new Date());const u=[['DAYS',864e5],['HRS',36e5],['MIN',6e4],['SEC',1e3]].map(([n,m])=>{const v=Math.floor(d/m);d-=v*m;return `<div><b>${String(v).padStart(2,'0')}</b><span>${n}</span></div>`});document.getElementById('cd').innerHTML=u.join('');}
 tick();setInterval(tick,1000);
 if(S.membership.enabled&&S.membership.url){document.getElementById('member').hidden=false;document.getElementById('memberBox').innerHTML=`<a class="soc" href="${esc(S.membership.url)}" target="_blank" rel="noopener">Support on ${esc(S.membership.provider)}</a>`;}

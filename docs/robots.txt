@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gtaintelligence7-afk.github.io/gta6i-media/sitemap.xml
